@@ -8,3 +8,4 @@ WORKDIR /app
 COPY --from=build /app/target/devops-integration.jar /app/
 EXPOSE 8080
 CMD ["java","-jar","devops-integration.jar"]
+RUN git config --global --add safe.directory .
